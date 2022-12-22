@@ -1,6 +1,7 @@
 <template>
-  <div class="users-list">
-    <table v-if="usersList.length">
+  <div class="users-list mt-5">
+    <h2>Users List</h2>
+    <table v-if="usersList.length" class="w-100 table-bordered">
         <thead>
             <tr>
                 <th>First Name</th>
@@ -11,7 +12,7 @@
         </thead>
         <tbody>
             <template v-for="(user, i) in usersList" :key="i">
-                <tr :class="user.age < 30 ? 'background-green' : 'background-red'">
+                <tr>
                     <td>{{ user.firstName }}</td>
                     <td>{{ user.lastName }}</td>
                     <td>{{ user.age }}</td>
